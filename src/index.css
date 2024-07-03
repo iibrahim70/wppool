@@ -26,3 +26,41 @@
 .section-wrapper {
   @apply px-5 lg:px-10 max-w-7xl mx-auto;
 }
+
+.hero-shape {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Pseudo-element for shapeOne */
+.hero-shape::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("@/assets/shapes/1.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; /* Ensure shapeOne is behind shapeTwo */
+  filter: brightness(20%); /* Set shapeOne to black */
+  opacity: 0.2; /* Decrease opacity of shapeOne */
+}
+
+/* Pseudo-element for shapeTwo */
+.hero-shape::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("@/assets/shapes/2.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2; /* Ensure shapeTwo is above shapeOne */
+}

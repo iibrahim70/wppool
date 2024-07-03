@@ -24,7 +24,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="py-5 bg-blue-700 text-white">
+    <nav className="py-5 bg-primary text-white">
       <div className="section-wrapper flex items-center justify-between gap-5">
         <div className="flex items-center gap-2.5">
           <img src={logo} alt="Brand Logo" />
@@ -79,11 +79,7 @@ const Navbar = () => {
           className="flex items-center justify-between gap-5 mb-5"
         >
           <div className="flex items-center gap-2.5">
-            <Button
-              variant="secondary"
-              size="sm"
-              className="rounded-full size-9 p-0"
-            >
+            <Button variant="secondary" size="icon" className="rounded-full">
               <IoShareSocial />
             </Button>
 
@@ -109,7 +105,7 @@ const Navbar = () => {
             </a>
           ))}
 
-          <button className="text-blue-500 font-semibold text-left px-4 py-2">
+          <button className="text-primary font-semibold text-left px-4 py-2">
             Visit WPPOOL
           </button>
         </div>
